@@ -43,6 +43,7 @@ console.log(typeof null);
 
 */
 
+/*
 let age=30;
 age=31;
 
@@ -50,3 +51,8 @@ const birthYear=1998;
 
 var job='programmer';
 job='teacher';
+*/
+
+const ageJonas = 2037-1991;
+const ageSarah = 2037-2018;
+console.log(ageJonas, ageSarah);
