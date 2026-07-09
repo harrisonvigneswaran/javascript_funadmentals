@@ -159,7 +159,7 @@ const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length -
 console.log(ages);
 */
 
-
+/*
 const friends = ['Michael', 'Steven', 'Peter'];
 firends.push('Jay'); // add element to the end of the array
 console.log(friends);
@@ -175,4 +175,72 @@ console.log(friends);
 
 console.log(friends.indexOf('Steven')); // index of the element
 
-console.log(friends.includes('Steven')); // check if element exists in the array  
+console.log(friends.includes('Steven')); // check if element exists in the array 
+
+*/
+
+// Objects
+
+/*
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven']
+}
+
+
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+const intrestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
+if (jonas[intrestedIn]) {
+  console.log(jonas[intrestedIn]);
+} else{
+  console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');nh
+}
+console.log(jonas[intrestedIn]);
+
+
+jonas.location = 'Portugal';
+jonas['twitter'] = '@jonasschmedtman';
+console.log(jonas)
+
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+*/
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYear: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense: true,
+
+  calcAge: function () {
+    this.age= 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function (){
+    return `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he has ${this.hasDriversLicense? 'a' : 'no'} drivers license`;
+  } 
+
+}
+
+console.log(jonas.calcAge());
+
+ console.log(jonas.age);  
+
+ console.log(jonas.getSummary());
+ console.log('Jonas has ' + jonas.calcAge() + ' years old and he has ' + (jonas.hasDriversLicense? 'a' : 'no') + ' drivers license');
+ 
