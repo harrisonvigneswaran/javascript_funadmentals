@@ -81,6 +81,7 @@ function fruitProcessor(apples, oranges) {
 console.log(fruitProcessor(2, 3));
 */
 
+/*
 const clacAge = function(birthYear){
   return 2037 - birthYear;
 }
@@ -124,3 +125,54 @@ function checkWinner(a,b,c,d,e,f){
 }
 console.log(checkWinner(44,23,71,65,54,49));
 console.log(checkWinner(85,54,41,23,34,27));
+
+*/
+
+// Introduction to Arrays
+
+/*
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+
+console.log(friends[0]);
+
+console.log(friends.length);
+
+console.log(friends[friends.length - 1]); 
+
+
+firends[2] = 'Jay';
+console.log(friends);
+
+// Exercise
+const calcAge = function(birthYear){
+  return 2037 - birthYear;
+}
+
+const years = [1990, 1967, 2002, 2010, 2018];
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+console.log(ages);
+*/
+
+
+const friends = ['Michael', 'Steven', 'Peter'];
+firends.push('Jay'); // add element to the end of the array
+console.log(friends);
+
+friends.unshift('John'); // add element to the beginning of the array
+console.log(friends);
+
+// remove last element of the array
+friends.pop(); // last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+console.log(friends.indexOf('Steven')); // index of the element
+
+console.log(friends.includes('Steven')); // check if element exists in the array  
