@@ -333,6 +333,7 @@ for (let exercise = 1; exercise < 4; exercise++){
 
 */
 
+/*
 for (let rep = 1; rep <= 10; rep++){
     console.log(`Lifting weight repetition ${rep} 🏋️‍♂️`);
   }
@@ -349,3 +350,38 @@ while(dice !== 6){
   dice = Math.trunc(Math.random() * 6) + 1;
   if (dice === 6) console.log('Loop is about to end...');
 }
+*/
+/*
+let theNumber = Number(prompt("Pick a number"));
+if (!Number.isNaN(theNumber)) {
+console.log("Your number is the square root of " +
+theNumber * theNumber);
+}
+
+if (1 + 1 == 2) console.log("It's true");
+*/
+
+
+/*
+let theNumber = Number(prompt("Pick a number"));
+if (!Number.isNaN(theNumber)) {
+console.log("Your number is the square root of " +
+theNumber * theNumber);
+} else {
+console.log("Hey. Why didn't you give me a number?");
+}
+*/
+
+/*
+// While loop
+let number = 0;
+while (number <= 12) {
+  console.log(number);
+  number += 2;
+} 
+*/
+let yourName;
+do {
+yourName = prompt("Who are you?");
+} while (!yourName);
+console.log(yourName);
