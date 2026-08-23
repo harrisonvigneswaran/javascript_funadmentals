@@ -71,3 +71,52 @@ let twice = multiplier(2);
 console.log(twice(5, 10));
 // → 100
 */
+
+//// Recrsion
+
+function powers(base, exponent) {
+  if (exponent == 0) {
+    return 1;
+  } else {
+    return base * powers(base, exponent - 1);
+  }
+}
+
+console.log(powers(2, 3));
+
+
+function countdown(n){
+  if(n<0){
+    return 0;
+    } else {
+      
+      countdown(n-1);
+      console.log(n)
+  }
+  
+  }
+countdown(2)
+
+/// function will count all the sum of the numbers
+function countIt(n){
+  if (n==0){
+    return 0;
+  }else{
+   return n + countIt(n-1)
+  }
+  }
+
+  console.log(`${countIt(10)} "this is count"`);
+
+
+// function that multiplies it self
+
+function multiply(a,b){
+  if (a==0 || b==0){
+    return 0;
+}else{
+  return a +  multiply(a, b-1)
+}
+
+}
+console.log(multiply(3,3))
