@@ -154,3 +154,37 @@ console.log(`${zeroPad(chickens, 3)} Chickens`);
 console.log(`${zeroPad(pigs, 3)} Pigs`);
 }
 printFarmInventory(7, 16, 3);
+
+//Challenges
+
+// function that will return the minimum of two numbers
+function minimumNum(a,b){
+  return Math.min(a,b)
+}
+
+console.log(minimumNum(2,10));
+
+// Recursion Example
+
+function isEven(n){
+  if (n==0){
+    return 'even';
+  } else if (n==1){
+    return 'odd';
+  }else if (n<0){
+    return "Please enter a positive number";
+  } else{
+    return isEven(n-2);
+
+  }
+}
+
+console.log(isEven(1));
+
+// function that will return the count of the characters in a string
+
+function countB(word){
+  if (word == "")
+    return "No words. Enter a word."
+  
+}
