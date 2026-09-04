@@ -184,7 +184,18 @@ console.log(isEven(1));
 // function that will return the count of the characters in a string
 
 function countB(word){
-  if (word == "")
-    return "No words. Enter a word."
-  
+  if (typeof word !== 'string'){
+    return "Please enter a string";
+  }else if (word.length == 0){
+    return "Please enter a string with characters";
+  }
+  let count = 0;
+  for (let i = 0; i < word.length; i++){
+    if (word[i] === 'b' || word[i] === 'B'){
+      count++;
+    }
+  }
+  return count;
 }
+
+console.log(countB(5));
