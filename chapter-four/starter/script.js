@@ -39,13 +39,13 @@ console.log(descriptions);
 
 // Arrays with objects
 
-let journal = [
+let journals = [
     {events: ["work", "touched tree", "pizza", "running"], squirrel: false},
     {events: ["work", "ice cream", "cauliflower", "lasagna"], squirrel: false},
     {events: ["weekend", "cycling", "break", "peanuts"], squirrel: true}
 ];
 
-console.log(journal[1].events); // accesses the events property of the second object in the array
+console.log(journals[1].events); // accesses the events property of the second object in the array
 
 
 //Mutability
@@ -62,3 +62,35 @@ console.log(object2.value);
 // → 15
 console.log(object3.value);
 // → 10
+
+
+//Mutability and the tracking of let 
+const score = {visitors: 0, home: 0};
+score.visitors = 1;
+console.log(score.visitors);
+// → 1
+
+
+let journal =[]
+
+function addEntry(events, squirrel) {
+    journal.push({events, squirrel});
+}
+
+addEntry(["work", "touched tree", "pizza", "running"], false);
+addEntry(["work", "ice cream", "cauliflower", "lasagna"], false);
+addEntry(["weekend", "cycling", "break", "peanuts"], true);     
+
+console.log(journal);
+
+//Computing Correlation
+
+function phi(table) {
+    return (table[3] * table[0] - table[2] * table[1]) /
+        Math.sqrt((table[2] + table[3]) *
+                  (table[0] + table[1]) *
+                  (table[1] + table[3]) *
+                  (table[0] + table[2]));
+}   
+
+console.log(phi([76, 9, 4, 1]));
