@@ -101,3 +101,51 @@ let babyprototype = {
 let killerBaby = Object.create(babyprototype)
 killerBaby.type = "crying";
 killerBaby.eat("pizza")
+
+//classes and constrctors
+
+let account1 = new BankAccount("harrison", 1000);
+let account2 = new BankAccount("John", 500);
+
+function BankAccount(owner,balance){
+    this.owner =owner;
+    this.balance = balance; 
+}   
+
+BankAccount.prototype.deposit = function(amount){
+    this.balance += amount;
+}
+
+BankAccount.prototype.withdraw = function(amount){
+    this.balance -= amount;
+}
+
+BankAccount.prototype.showBalance = function() {
+  console.log(`${this.owner} has $${this.balance}`);
+};
+account1.deposit(500);
+account1.showBalance();
+
+//class examples
+
+class Car {
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+
+  drive() {
+    console.log(`${this.brand} ${this.model} is driving.`);
+  }
+}
+
+let car1 = new Car("Toyota", "Corolla");
+let car2 = new Car("Honda", "Civic");
+
+car1.drive();
+
+Car.prototype.move = function(){
+    console.log(`${this.brand} ${this.model} is moving.`);
+}
+
+car1.move();
