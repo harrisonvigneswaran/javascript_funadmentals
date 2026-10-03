@@ -149,3 +149,154 @@ Car.prototype.move = function(){
 }
 
 car1.move();
+
+
+//maping 
+
+let ages = new Map();
+ages.set("Boris,39")
+ages.set("Liang", 22)
+
+console.log(ages.has("toString"));
+
+//Polymorphisim
+
+let dogss = {
+    name: "Buddy",
+    speakss() {
+        console.log("Woof!");
+    }
+};
+
+let cats = {
+    name: "Mittens",
+    speakss() {
+        console.log("Meow!");
+    }
+};
+
+let robots = {
+    name: "R2D2",
+    speakss() {
+        console.log("Beep boop!");
+    }
+};
+
+function makeItSpeak(thing){
+    thing.speakss()
+}
+
+makeItSpeak(dogss);
+
+//symbols
+
+class Froggy{
+    constructor(type){
+        this.type =type
+    }
+    talk(line){
+        console.log(`The ${this.type} rabbit says '${line}'`);
+    }
+}
+
+let blackFraggy= new Froggy("kiler")
+let sym = Symbol("name")
+console.log(sym == Symbol("name"))
+
+Froggy.prototype[sym]=55
+console.log(blackFraggy[sym])
+
+// Getter, setters, statics
+
+let people = {
+    firstName: "Harrison",
+    lastName: "Vigneswaran",
+
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+
+    set myName(value){
+        this.firstName = value;
+}
+};
+
+console.log(people.fullName);
+
+
+let varyingSize ={
+    get size(){
+        return Math.floor(Math.random() * 100);
+    }
+}
+
+console.log(varyingSize.size);
+
+person.firstName = "John";
+
+console.log(person.firstName)
+
+//Getters-Setters
+
+
+class Temperature {
+    constructor(celsius) {
+        this.celsius = celsius;
+    }
+
+    get fahrenheit() {
+        return this.celsius * 1.8 + 32;
+    }
+
+    set fahrenheit(value) {
+        this.celsius = (value - 32) / 1.8;
+    }
+
+    static fromFahrenheit(value) {
+        return new Temperature((value - 32) / 1.8);
+    }
+}
+
+let usualTemp = new Temperature(23)
+
+
+
+let temp = Temperature.fromFahrenheit(86);
+
+
+
+console.log(temp.celsius);
+
+console.log(temp.fahrenheit)
+
+console.log(usualTemp.fahrenheit)
+
+//Inheritence
+
+class Alien {
+    constructor(name) {
+        this.name = name;
+    }
+
+    eat() {
+        console.log(`${this.name} is eating`);
+    }
+
+    sleep() {
+        console.log(`${this.name} is sleeping`);
+    }
+}
+
+let alien = new Alien("bobby");
+
+alien.eat();
+alien.sleep();
+
+class Glip extends Alien{
+
+}
+
+let glip = new Glip("Glorp");
+
+glip.eat();
+glip.sleep();
